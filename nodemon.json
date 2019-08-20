@@ -1,0 +1,8 @@
+{
+    "watch": ["src/**/*.ts"],
+    "exec": "node --nolazy --inspect=0.0.0.0:9229 --require ts-node/register ./src/server.ts",
+    "ext": "js json ts",
+    "env": {
+      "DEBUG": "main,app*"
+    }
+  }

@@ -1,0 +1,41 @@
+{
+  "name": "ts-start",
+  "version": "1.0.0",
+  "description": "Typescript Project Starting Point",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon",
+    "docker:dev": "docker build . -f dev.Dockerfile -t ts-starter-dev && docker run -v $(pwd):/app -p 3000:3000 -p 9229:9229 --name ts-starter-dev -it ts-starter-dev",
+    "docker:build": "docker build . -t ts-starter",
+    "docker:start": "docker run -p 3000:3000 --name ts-starter -it ts-starter",
+    "docker:rm": "docker rm ts-starter && docker rm ts-starter-dev",
+    "lint": "tslint --project tsconfig.json",
+    "start": "node ./dist/server.js",
+    "test:dev": "jest --watch",
+    "test": "npm run lint && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cif/ts-start.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cif/ts-start/issues"
+  },
+  "homepage": "https://github.com/cif/ts-start#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.2",
+    "@types/supertest": "^2.0.8",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}
