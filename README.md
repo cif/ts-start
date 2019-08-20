@@ -26,4 +26,4 @@ VSCode debug configurations for `Service` and `Tests` (TODO: expose and bind to 
 
 Run `npm docker:build` Dockerized build image from `node:10`, final production image from `alpine` ~34MB
 
-Run container locally via `npm run docker:start`, `npm run docker:stop`
+Run container locally via `npm run docker:start`
