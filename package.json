@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon",
+    "dev": "npx concurrently 'nodemon' 'npm run test:dev'",
     "docker:dev": "docker build . -f dev.Dockerfile -t ts-starter-dev && docker run -v $(pwd):/app -p 3000:3000 -p 9229:9229 --name ts-starter-dev -it ts-starter-dev",
     "docker:build": "docker build . -t ts-starter",
     "docker:start": "docker run -p 3000:3000 --name ts-starter -it ts-starter",

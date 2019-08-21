@@ -12,13 +12,13 @@ Minimal configuration. Augment as necessary.
 
 Node native `http` lib. No router. Single handler in `src/app.ts`, HTTP/1.1 server created in `src/server.ts`.
 
-#### Tests
-
-Jest runner. Supertest in `tests/app.test.ts` makes HTTP calls to service.
-
 #### Development
 
 Dockerized nodemon dev via `npm run docker:dev` so it works on everyone's machine.
+
+Jest runner watches tests while running dev server.
+
+Supertest in `tests/app.test.ts` makes HTTP calls to service.
 
 VSCode debug configurations for `Service` and `Tests` (TODO: expose and bind to container ports vs local)
 
